@@ -50,7 +50,7 @@ function Header() {
 
             <div className="header__right">
                 <div className="header__info">
-                    <Avatar />
+                    <Avatar src="https://avatars.githubusercontent.com/u/38984721?s=400&amp;u=d474912b1ba7fcbbffe3a89201c6f30dd291e8e8&amp;v=4" width="200" height="200" alt="@Kertich"/>
                     <h4>Hackertich</h4>
                 </div>
                 <IconButton>
