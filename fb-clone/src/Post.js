@@ -5,6 +5,7 @@ import ThumbUpIcon from "@material-ui/icons/ThumbUp";
 import ChatBubbleOutLineIcon from "@material-ui/icons/ChatBubbleOutline";
 import NearMeIcon from "@material-ui/icons/NearMe";
 import { ExpandMoreOutlined } from "@material-ui/icons";
+import { AccountCircle } from '@material-ui/icons';
 
 
 function Post({profilePic, image, username, timestamp, message }) {
@@ -31,7 +32,20 @@ function Post({profilePic, image, username, timestamp, message }) {
                     <ThumbUpIcon />
                     <p>Like</p>
                 </div>
+                <div className="post__option">
+                    <ChatBubbleOutLineIcon />
+                    <p>Comment</p>
+                </div>
+                <div className="post__option">
+                    <NearMeIcon />
+                    <p>Share</p>
+                </div>
+                <div className="post__option">
+                    <AccountCircle />
+                    <ExpandMoreOutlined/>
+                </div>
             </div>
+           
         </div>
     )
 }
