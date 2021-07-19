@@ -12,12 +12,14 @@ import AddIcon from "@material-ui/icons/Add";
 import ForumIcon from "@material-ui/icons/Forum";
 import NotificationsActiveIcon from "@material-ui/icons/NotificationsActive";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import {useStateValue } from "./StateProvider";
 
 function Header() {
+    const [{ user }, dispatch] = useStateValue();
     return (
         <div className="header">
             <div className="header__left">
-                <img alt="File:Facebook Logo.png" src="//upload.wikimedia.org/wikipedia/commons/4/44/Facebook_Logo.png" 
+                <img alt="File:Facebook Logo.png" src= { user.photoURL } 
                 decoding="async" 
                 width="512" 
                 height="513" 
@@ -50,8 +52,9 @@ function Header() {
 
             <div className="header__right">
                 <div className="header__info">
-                    <Avatar src="https://avatars.githubusercontent.com/u/38984721?s=400&amp;u=d474912b1ba7fcbbffe3a89201c6f30dd291e8e8&amp;v=4" width="200" height="200" alt="@Kertich"/>
-                    <h4>Hackertich</h4>
+                    <Avatar src={ user.photoURL } />
+                    
+                    <h4>{user.displayName}</h4>
                 </div>
                 <IconButton>
                     <AddIcon />
